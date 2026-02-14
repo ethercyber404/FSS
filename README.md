@@ -55,7 +55,6 @@ button{
 
 <body>
 
-<!-- Hidden YouTube music iframe -->
 <iframe
   id="music"
   width="0"
@@ -85,15 +84,15 @@ button{
 
 <div id="final" class="screen">
     <h1>Yea! Good choice!- আমি জানতাম!! 🥰</h1>
-    <img src="images/sticker.webp" alt="Cute Bear Sticker">
+
+    
 </div>
 
 <script>
-// Set the YouTube Shorts as background music
+
 document.getElementById("music").src =
     "https://www.youtube.com/embed/WeXVuFG9MZU?autoplay=1&loop=1&playlist=WeXVuFG9MZU&mute=0";
 
-// Start function for intro
 function start(){
     document.getElementById("intro").style.display="none";
     document.getElementById("loading").style.display="block";
@@ -115,7 +114,6 @@ function showQuestion(){
     document.getElementById("question").style.display="block";
 }
 
-// No button dodging
 let noBtn = document.getElementById("no");
 let yesBtn = document.getElementById("yes");
 let size = 22;
@@ -130,14 +128,12 @@ noBtn.addEventListener("mouseover", function(){
     yesBtn.style.fontSize = size+"px";
 });
 
-// Yes button click
 yesBtn.addEventListener("click", function(){
     document.getElementById("question").style.display="none";
     document.getElementById("final").style.display="block";
     launchHearts();
 });
 
-// Floating hearts animation
 function launchHearts(){
     for(let i=0;i<50;i++){
         let heart=document.createElement("div");
@@ -153,3 +149,4 @@ function launchHearts(){
 
 </body>
 </html>
+
